@@ -1,7 +1,7 @@
 /* ===========================================================
  * sw.js
  * ===========================================================
- * Copyright 2016 @huxpro
+ * Copyright 2016 @Ace
  * Licensed under Apache 2.0 
  * Register service worker.
  * ========================================================== */
@@ -10,7 +10,7 @@ const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
-  "huangxuan.me",
+  "https://babaofcoco.github.io/coco",
   "yanshuo.io",
   "cdnjs.cloudflare.com"
 ]

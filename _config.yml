@@ -3,8 +3,8 @@ title: Baba of CoCo
 SEOTitle: 可可的爸爸 | Baba of CoCo
 header-img: img/home-bg.jpg
 email: 2435644284@qq.com
-description: "关于前端与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, 肖玉, Lynn, 肖玉的男朋友"
+description: "可可的爸爸，这个称呼开始于2016.12。"
+keyword: "可可的爸爸"
 url: "https://babaofcoco.github.io/coco"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -31,7 +31,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 
-# Gems
+# Gem
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate]
 
@@ -51,7 +51,7 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: huxblog
+duoshuo_username: babaofcoco
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
@@ -64,7 +64,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: https://babaofcoco.github.io/coco
 
 
 
