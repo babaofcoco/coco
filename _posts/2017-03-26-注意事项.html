@@ -1,0 +1,55 @@
+---
+layout: default
+title: 使用github写博客注意事项
+---
+<h2>{{ page.title }}</h2>
+<p>今天是2017年3月26日，在家闲得无聊，琢磨着怎样创作自己的blog。可是，时间太久竟然不知道怎么使用git了。下面我把如何使用github做个简单的总结，主要目的是在下一次长时间不用github，方便我记起。</p>
+<ol>
+	<li>
+刚打开家里的电脑，居然没有安装git。。。。惭愧家里的电脑多是用来看电视剧，看电影了
+	</li>
+	<p>下载git，并安装，我下载的地址是：https://git-scm.com/download/win</p>
+
+	<li>
+	克隆一下已有代码。git clone -b gh-pages  git clone git://github.com/babaofcoco/coco.git
+	</li>
+
+	<li>
+	查看修改了哪些文件。git status
+	</li>
+
+	<li>
+	添加远程不存在的git文件。git add .
+	</li>
+
+	<li>
+	提交修改。git commit -m "memo" 
+	</li>
+
+	<li>
+	更新到远程服务器上。git push
+	</li>
+
+	<li>
+	移除，删除文件。git rm 文件
+	</li>
+
+	<li>
+	查看所有分支。git branch -r
+	</li>
+
+	<li>
+	创建或者获取某一个分支，git checkout 分支; git check --orphan gh-pages
+	</li>
+
+	<li>
+	在使用的过程中不想每次都输入用户名和密码，需要用到ssh-keygen
+	</li>
+	<p>1, ssh-keygen -t rsa -C "2435644284@qq.com"</p>
+	<p>2，将生成的id-rsa.pub里面的内容复制，并拷贝到https://github.com/settings/keys页面下，New SSH key</p>
+	<p>3, 检查有没有成功。git -T git@github.com</p>
+	<p>4, 除此之外添加如下两句：git config --global user.name "babaofcoco";git config --global user.email "2435644284@qq.com"</p>
+	<p></p>
+</ol>
+
+<p>{{ page.date | date_to_string }}</p>
