@@ -24,9 +24,53 @@ tags:
 <br>SIP账号模板
 <br>username=+8601088888888@ims.js.chinamobile.com
 <br>fromuser=+8601088888888
-<br>host=221.130.109.160(运营商的IMS地址)
+<br>host=XXX.XXX.XXX.XXX(运营商的IMS地址)
 <br>fromdomain=ims.js.chinamobile.com
 <br>secret=88888888
 
-<p>有了这个模板，我们就可以配置asterisk。</p>
+<p>有了这个模板，我们就可以配置asterisk。配置步骤如下：</p>
+<ol>
+<li>
+首先，在/etc/asterisk/sip.conf创建sip配置
+</li>
+<br>[trunk_ims]
+
+<br>host=XXX.XXX.XXX.XXX;;运营商的IMS地址
+
+<br>username=8601088888888@ims.fj.chinamobile.com ;;此处不能加’+’
+
+<br>secret=88888888
+
+<br>type=friend
+
+<br>insecure=port,invite
+
+<br>fromdomain=ims.js.chinamobile.com
+
+<br>fromuser=+8601088888888 ;;此处必须要加个’+’ 
+
+<br>dtmfmode=inband
+
+<br>context=from-trunk
+
+<br>trustrpid=no
+
+<br>sendrpid=no
+
+<br>canreinvite=no
+<li>
+在/etc/asterisk/sip.conf创建注册配置
+</li>
+<br>;;使用格式：register => fromuser@fromdomain:secret:authuser@host:port/extension
+
+ 
+
+<br>register=+8601088888888@ims.js.chinamobile.com:88888888:88888888@ims.fj.chinamobile.com@XXX.XXX.XXX.XXX:5060/8601088888888
+
+<br>;;fromuser 必须要加个’+’ , authuser不能有’+’,extension有无’+’没关系
+<li>
+是验证是否成功：sip reload; sip show registry
+</li>
+
+</ol>
 <p></p>
