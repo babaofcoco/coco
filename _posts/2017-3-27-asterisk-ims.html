@@ -1,0 +1,32 @@
+---
+layout:     post
+title:      "Asterisk对接运营商IMS系统"
+subtitle:   "虚拟运营商如何利用Asterisk对接运营商的IMS系统"
+date:       2017-3-27 12:21:00
+author:     "Ace"
+header-img: "img/home-bg-o.jpg"
+tags:
+    - 虚拟运营商
+    - IMS
+    - Asterisk
+    - Call Center
+    - 呼叫中心
+---
+
+<p>今天是2017年3月27日，现在距离我午休还有二十分钟，利用这二十分钟，我记录一下Asterisk如何对接运营商IMS系统</p>
+<p>现在运营商提供给企业的电话接口，由原来的E1、VoIP接口、正在向IMS接口转变。虽然VoIP接口和IMS接口都是SIP协议，但是两者在企业看来还是有很大区别的，主要体现在协议使用的细节上。企业在和运营商对接的时候，购买的PBX设备的参数可以看到具体的差异。下面主要描述一下IMS接口。</p>
+<p>我以Asterisk作为企业PBX，进行描述。一般，运营商提供IMS接口的IP是VLAN地址，所以，我们需要一般将PBX安装（购买选择）两个网卡，一个用于接运营商IMS系统；另一个用于企业内部网络。</p>
+<br/>
+<p>申请的IMS账号一般如下格式：</p>
+<p>账号一般是申请的号码加移动的域 如：+8601088888888@ims.js.chinamobile.com</p>
+<p>密码默认是电话号码 如：88888888</p>
+<br>
+<br>SIP账号模板
+<br>username=+8601088888888@ims.js.chinamobile.com
+<br>fromuser=+8601088888888
+<br>host=221.130.109.160(运营商的IMS地址)
+<br>fromdomain=ims.js.chinamobile.com
+<br>secret=88888888
+
+<p>有了这个模板，我们就可以配置asterisk。</p>
+<p></p>
