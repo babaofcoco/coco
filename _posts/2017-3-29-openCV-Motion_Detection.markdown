@@ -21,7 +21,7 @@ tags:
 Background subtraction基本原理：首先取一张静态的背景图（不包含要检测的移动物体），然后比较监控图像（包含移动物体）和背景图，找到不同区域，这个区域就是要检测的物体。在现实环境中要复杂的多，我们还要考虑到光线变化、阴影、反射等等影响背景环境的因素。
 </i>
 
-```python
+`
 import cv2
 import time
  
@@ -69,7 +69,7 @@ while True:
  
 camera.release()
 cv2.destroyAllWindows()
-```
+`
 
 <br><b>相关资源</b>
 <ul>
