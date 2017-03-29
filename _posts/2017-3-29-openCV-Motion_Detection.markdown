@@ -4,7 +4,7 @@ title:      "使用OpenCV检测移动的物体"
 subtitle:   "视频监控中进行物体移动检测的技术"
 date:       2017-3-29 12:10:00
 author:     "Ace"
-header-img: "img/post-bg-kuaidi.jpg.jpg"
+header-img: "img/post-bg-kuaidi.jpg"
 tags:
     - OpenCV
     - 视频监控
