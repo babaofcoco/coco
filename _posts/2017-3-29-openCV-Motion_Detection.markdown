@@ -21,7 +21,7 @@ tags:
 Background subtraction基本原理：首先取一张静态的背景图（不包含要检测的移动物体），然后比较监控图像（包含移动物体）和背景图，找到不同区域，这个区域就是要检测的物体。在现实环境中要复杂的多，我们还要考虑到光线变化、阴影、反射等等影响背景环境的因素。
 </i>
 
-'''
+'''python
 import cv2
 import time
  
@@ -44,12 +44,7 @@ while True:
     seconds = end - start
     if seconds < 1.0/fps:
         time.sleep(1.0/fps - seconds)
-    """
-    cv2.imshow('img', cur_frame)
-    key = cv2.waitKey(30) & 0xff
-    if key == 27:
-        break
-    """
+
     gray_img = cv2.cvtColor(cur_frame, cv2.COLOR_BGR2GRAY)
     gray_img = cv2.resize(gray_img, (500, 500))
     gray_img = cv2.GaussianBlur(gray_img, (21, 21), 0)
@@ -75,6 +70,13 @@ while True:
 camera.release()
 cv2.destroyAllWindows()
 '''
+
+<br><b>相关资源</b>
+<ul>
+<li>https://github.com/RobinDavid/Motion-detection-OpenCV </li>
+<li>https://github.com/cedricve/motion-detection </li>
+<li>motion－Linux下的运动检测工具 </li>
+</ul>
 
 
 
