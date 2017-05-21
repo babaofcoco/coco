@@ -149,4 +149,14 @@ git clone https://github.com/subins2000/open.git open
 <br>在文件/etc/php.ini 中添加 extension=mcrypt.so
 
 <br><br>
+3. 注册的时候出现：
+<br>
+<i>SMTP Error: Could not authenticate. Warning: file_put_contents(/home/apache/www/open/inc/nextMailAccount.txt): failed to open stream: Permission denied in /home/apache/www/open/inc/class.open.php on line 617</i>
+<br><br>
+解决方法：
+<br><br>
+无
+<br><br>
+
+
 Over
