@@ -98,6 +98,7 @@ service httpd restart
 <br>
 
 <b>遇到的问题</b>
+<br>
 
 1. 安装过程中，在执行第4步的时候，注意查看index.php这个文件。里面有一行注释的代码要根据open网站的情况，开放或者注释。规则是，
 <br>
