@@ -20,13 +20,12 @@ tags:
 <li>项目发起人：Subin Siby
 <li>开源项目的地址：http://open.subinsb.com </li>
 <li>博客地址：http://open.subinsb.com/blog</li>
-<li>github地址：https://github.com/subins2000/open</li>
-</ul>
+<li>github地址：https://github.com/subins2000/open</li></ul>
 <br>
 
 <br><b>Linux安装过程：</b>
 
-<br>
+<br><br>
 1. 安装 Git 软件，执行下面的命令
 <br><br>
 
@@ -62,19 +61,19 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 5. 创建一个数据库 open
-<br><br>
+<br>
 
 
 <br>mysql -uroot -p
 <br>create database open;
 
 
-<br><br><br>		
+<br><br>		
 6. 创建数据库所需要的表，所有表都在open目录下的tables.sql文件中
-<br><br>
+
 <br><br>
 7. 配置open网站的配置文件，主要是config.php文件，更改数据库名称和用户名密码
-<br><br>
+<br>
 
 <br>
 <br>define("DATABASE", serialize(array(
@@ -88,7 +87,7 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 8. 重启myqld、httpd，用ie登陆查看http://192.168.16.204
-<br><br>
+<br>
 
 
 <br>service mysqld restart
@@ -125,9 +124,10 @@ git clone https://github.com/subins2000/open.git open
 
 <br>Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.soc
 
-<br><br>
-<br>解决方法： 找到PDO建林数据库连接的地方加上“unix_socket=/home/mysqldata/mysql/mysql.sock”,这里涉及到两个文件./inc/class.open.php和./inc/class.logsys.php
-<br><br>
+
+<br>解决方法：
+<br>找到PDO建林数据库连接的地方加上“unix_socket=/home/mysqldata/mysql/mysql.sock”,这里涉及到两个文件./inc/class.open.php和./inc/class.logsys.php
+<br>
 
 
 <br>new PDO("mysql:dbname={$database["name"]};unix_socket=/home/mysqldata/mysql/mysql.sock;host={$database["host"]};port={$database["port"]}"
@@ -135,7 +135,7 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 3. 在注册的时候出现错误：
-<br><br>
+<br>
 
 
 
@@ -143,7 +143,6 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 解决方法：
-<br><br>
 
 <br>yum install php-mcrypt mcrypt
 <br>在文件/etc/php.ini 中添加 extension=mcrypt.so
@@ -154,7 +153,7 @@ git clone https://github.com/subins2000/open.git open
 <i>SMTP Error: Could not authenticate. Warning: file_put_contents(/home/apache/www/open/inc/nextMailAccount.txt): failed to open stream: Permission denied in /home/apache/www/open/inc/class.open.php on line 617</i>
 <br><br>
 解决方法：
-<br><br>
+<br>
 无
 <br><br>
 
