@@ -90,7 +90,7 @@ tags:
 *<li>当网站的根目录就是网站域名，没有子目录的话不需要打开，例如：http://192.168.16.204，http://open.org  http://192.168.16.204:8800;
 <li>当网站的根目录是域名下的子目录，需要将其打开，例如：http://192.168.16.204/open，http://open.org/open  http://192.168.16.204:8800/open*
 
-```
+```php
 		/* This is not needed if Open is in site's document root, but needed if Open is in a sub folder
 		---------------------
 		// Make the request URL relative to the base URL of Lobby installation. http://localhost/open will be changed to "/" and http://open.local to "/"
@@ -103,7 +103,7 @@ tags:
 <br>
 2. MySQLsock位置被我改变了，导致PDO访问mysql的时候出现错误。
 
-```
+```sh
 		Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.soc
 
 	解决方法： 找到PDO建林数据库连接的地方加上“unix_socket=/home/mysqldata/mysql/mysql.sock”,这里涉及到两个文件./inc/class.open.php和./inc/class.logsys.php
