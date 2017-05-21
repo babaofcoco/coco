@@ -28,20 +28,19 @@ tags:
 
 <br>
 1. 安装 Git 软件，执行下面的命令
-<br>
+<br><br>
 
+sudo apt-get update && sudo apt-get install git
 
-		sudo apt-get update && sudo apt-get install git
-
-<br>		
-2. 改变目录到httpd的页面路径 /var/www >= V2.5 /var/www/html
-<br>
+<br><br>		
+2. 改变目录到httpd的页面路径 /var/www 当httpd版本>= V2.5 路径是/var/www/html
+<br><br>
 
 ```sh
 cd /var/www
 ```
 
-<br>
+<br><br>
 3. 下载代码到此目录的open下，
 <br>
 
@@ -49,9 +48,9 @@ cd /var/www
 git clone https://github.com/subins2000/open.git open
 ```
 
-<br>
+<br><br>
 4. 把open目录下所有open.subinsb.com字符串，替换为你自己的服务器域名或者IP，我这里是192.168.16.204。注意这里有子目录open，我在/etc/httpd/conf/httpd.conf上加了一个虚拟域名，所以把整个open目录当成我的虚拟域名的工作目录。
-<br>
+<br><br>
 
 
 ```xml
