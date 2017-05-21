@@ -122,7 +122,7 @@ git clone https://github.com/subins2000/open.git open
 
 <br><i>Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.soc</i>
 
-
+<br>
 <br>解决方法：
 <br>找到PDO建林数据库连接的地方加上“unix_socket=/home/mysqldata/mysql/mysql.sock”,这里涉及到两个文件./inc/class.open.php和./inc/class.logsys.php
 <br>
