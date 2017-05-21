@@ -103,7 +103,7 @@ service httpd restart
 <br>
 <li>当网站的根目录就是网站域名，没有子目录的话不需要打开，例如：http://192.168.16.204，http://open.org  http://192.168.16.204:8800;
 <li>当网站的根目录是域名下的子目录，需要将其打开，例如：http://192.168.16.204/open，http://open.org/open  http://192.168.16.204:8800/open;
-<br>
+<br><li></li>
 
 ```php
 /* This is not needed if Open is in site's document root, but needed if Open is in a sub folder
