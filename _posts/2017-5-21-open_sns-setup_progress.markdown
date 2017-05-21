@@ -16,10 +16,12 @@ tags:
 > 今天是2017年5月21日，今天在浏览github上的开源项目时，偶然看到一个开源的社交网站，名字起得也非常开源，就叫open。出于好奇，想看看这个开源的社交网站长什么样子，所以就根据说明在自己的虚拟机上安装了一下，在这个过程中也遇到很多问题。为了让更多人了解这个开源项目，我把安装过程和遇到的问题整理出来。
 
 <br>首先列出一些基本信息。
+<ul>
 <li>项目发起人：Subin Siby
 <li>开源项目的地址：http://open.subinsb.com </li>
 <li>博客地址：http://open.subinsb.com/blog</li>
 <li>github地址：https://github.com/subins2000/open</li>
+</ul>
 <br>
 
 <br><b>Linux安装过程：</b>
@@ -28,9 +30,8 @@ tags:
 1. 安装 Git 软件，执行下面的命令
 <br>
 
-```sh
-sudo apt-get update && sudo apt-get install git
-```
+
+		sudo apt-get update && sudo apt-get install git
 
 <br>		
 2. 改变目录到httpd的页面路径 /var/www >= V2.5 /var/www/html
