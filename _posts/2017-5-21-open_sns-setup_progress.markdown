@@ -27,27 +27,29 @@ tags:
 <br>
 1. 安装 Git 软件，执行下面的命令
 
-```
+```sh
 sudo apt-get update && sudo apt-get install git
 ```
 
 <br>		
 2. 改变目录到httpd的页面路径 /var/www >= V2.5 /var/www/html
 
-```
+```sh
 cd /var/www
 ```
+
 <br>
 3. 下载代码到此目录的open下，
 
-```
+```sh
 git clone https://github.com/subins2000/open.git open
 ```
 
 <br>
 4. 把open目录下所有open.subinsb.com字符串，替换为你自己的服务器域名或者IP，我这里是192.168.16.204。注意这里有子目录open，我在/etc/httpd/conf/httpd.conf上加了一个虚拟域名，所以把整个open目录当成我的虚拟域名的工作目录。
 
-```
+
+```xml
 NameVirtualHost *:80
 <VirtualHost *:80>
     DocumentRoot /home/apache/www/open
@@ -57,12 +59,14 @@ NameVirtualHost *:80
 <br>
 5. 创建一个数据库 open
 
-```		
-		mysql -uroot -p
-		create database open;
+```sh
+mysql -uroot -p
+create database open;
 ```
+
 <br>		
 6. 创建数据库所需要的表，所有表都在open目录下的tables.sql文件中
+
 <br>
 7. 配置open网站的配置文件，主要是config.php文件，更改数据库名称和用户名密码
 
@@ -75,12 +79,13 @@ define("DATABASE", serialize(array(
 	"pass" => "123456", 	// getenv('OPENSHIFT_MYSQL_DB_PASSWORD')
 )));
 ```
+
 <br>
 8. 重启myqld、httpd，用ie登陆查看http://192.168.16.204
 
-```
-		service mysqld restart
-		service httpd restart
+```sh
+service mysqld restart
+service httpd restart
 ```		
 
 <br>
@@ -92,7 +97,7 @@ define("DATABASE", serialize(array(
 *<li>当网站的根目录就是网站域名，没有子目录的话不需要打开，例如：http://192.168.16.204，http://open.org  http://192.168.16.204:8800;
 <li>当网站的根目录是域名下的子目录，需要将其打开，例如：http://192.168.16.204/open，http://open.org/open  http://192.168.16.204:8800/open*
 
-```php
+```ph
 /* This is not needed if Open is in site's document root, but needed if Open is in a sub folder
 ---------------------
 // Make the request URL relative to the base URL of Lobby installation. http://localhost/open will be changed to "/" and http://open.local to "/"
