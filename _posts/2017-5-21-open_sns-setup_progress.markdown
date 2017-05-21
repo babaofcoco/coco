@@ -146,7 +146,7 @@ git clone https://github.com/subins2000/open.git open
 <br><br>
 
 <br>yum install php-mcrypt mcrypt
-<br>extension=mcrypt.so
+<br>在文件/etc/php.ini 中添加 extension=mcrypt.so
 
 <br><br>
 Over
