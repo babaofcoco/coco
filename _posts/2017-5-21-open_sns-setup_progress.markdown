@@ -146,7 +146,7 @@ git clone https://github.com/subins2000/open.git open
 <br><br>
 
 <br>yum install php-mcrypt mcrypt
-<br>extension=php-mcrpt.so
+<br>extension=mcrypt.so
 
 <br><br>
 Over
