@@ -101,13 +101,14 @@ git clone https://github.com/subins2000/open.git open
 
 1. 安装过程中，在执行第4步的时候，注意查看index.php这个文件。里面有一行注释的代码要根据open网站的情况，开放或者注释。规则是，
 <br>
+<br>
 
 <li>当网站的根目录就是网站域名，没有子目录的话不需要打开，例如：http://192.168.16.204; http://open.org  http://192.168.16.204:8800;
 <li>当网站的根目录是域名下的子目录，需要将其打开，例如：http://192.168.16.204/open;   http://open.org/open  http://192.168.16.204:8800/open;
 
 
 
-<br>
+<br><br>
 <br>/* This is not needed if Open is in site's document root, but needed if Open is in a sub folder
 <br>---------------------
 <br>// Make the request URL relative to the base URL of Lobby installation. http://localhost/open will be changed to "/" and http://open.local to "/"
