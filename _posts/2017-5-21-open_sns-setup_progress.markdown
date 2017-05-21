@@ -119,10 +119,8 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 2. MySQLsock位置被我改变了，导致PDO访问mysql的时候出现错误。
-<br><br>
 
-
-<br>Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.soc
+<br><i>Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.soc</i>
 
 
 <br>解决方法：
@@ -135,11 +133,7 @@ git clone https://github.com/subins2000/open.git open
 
 <br><br>
 3. 在注册的时候出现错误：
-<br>
-
-
-
-<br>Fatal error: Call to undefined function mcrypt_get_iv_size() in /home/apache/www/open/inc/class.open.php on line 79
+<br><i>Fatal error: Call to undefined function mcrypt_get_iv_size() in /home/apache/www/open/inc/class.open.php on line 79</i>
 
 <br><br>
 解决方法：
