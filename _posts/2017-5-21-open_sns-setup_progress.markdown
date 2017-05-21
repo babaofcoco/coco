@@ -29,7 +29,7 @@ tags:
 1. 安装 Git 软件，执行下面的命令
 <br><br>
 
-sudo apt-get update && sudo apt-get install git
+sudo yum update && sudo yum install git
 
 <br><br>		
 2. 改变目录到httpd的页面路径 /var/www 当httpd版本>= V2.5 路径是/var/www/html
